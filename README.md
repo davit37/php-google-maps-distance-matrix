@@ -7,8 +7,22 @@ There is support for both the Standard License and Premium/Enterprise License ty
 
 Install the package using composer:
 
+add repositories to composer.json
 ```
-$ composer require davit37/php-google-maps-distance-matrix
+ "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/davit-logique/google-maps-distance-matrix"
+        }
+    ]
+
+```
+
+add packet to composer.json
+
+```
+"davit37/php-google-maps-distance-matrix": "^1.2",
+
 ```
 
 ## Frameworks
@@ -58,7 +72,7 @@ By default we use the `.env` configuration values to get your API key.
 If you have a standard api key all you need to add to your `.env` is:
 
 ```
-GOOGLE_MAPS_KEY=MY-API-KEY
+GOOGLE_KEY=MY-API-KEY
 ```
 
 If you are a Premium / Enterprise Google Maps user, and use a encryption key and client ID then you should add
@@ -66,8 +80,8 @@ the following to your `.env`:
 
 ```
 GOOGLE_LICENSE_TYPE=premium
-GOOGLE_MAPS_CLIENT_ID=MY-CLIENT-ID
-GOOGLE_MAPS_ENC_KEY=MY-ENCRYPTION-KEY
+GOOGLE_CLIENT_ID=MY-CLIENT-ID
+GOOGLE_ENCRYPTION_KEY=MY-ENCRYPTION-KEY
 ```
 
 Please, make sure you don't store your keys in version control!
